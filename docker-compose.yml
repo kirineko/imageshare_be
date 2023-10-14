@@ -16,7 +16,7 @@ services:
       - ./mysql/init:/docker-entrypoint-initdb.d
     # 指定环境变量
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --default-authentication-plugin=mysql_native_password
 
   imageshare:
