@@ -17,7 +17,7 @@ public class ImageSeviceImpl implements ImageSevice {
     @Override
     public List<Image> queryAll() {
         QueryWrapper wrapper = new QueryWrapper();
-       return imageMapper.selectList((Wrapper<Image>) wrapper.orderByDesc("upload_time"));
+        return imageMapper.selectList((Wrapper<Image>) wrapper.orderByDesc("upload_time"));
     }
 
     @Override

@@ -4,12 +4,12 @@ server:
 spring:
   datasource:
     #数据库用户名
-    username: ${DB_USERNAME}
+    username: ${DB_USERNAME:test}
     #数据库用户密码
-    password: ${DB_PASSWORD}
+    password: ${DB_PASSWORD:test}
     #serverTimezone=UTC 解决时区的报错 一般mysql是8.0以上的是必须配置这个
     #userUnicode=true&characterEncoding=utf-8 指定字符编码、解码格式
-    url: ${DB_URL}
+    url: ${DB_URL:jdbc:mysql://localhost:3306/imageshare?serverTimezone=Asia/Shanghai&userUnicode=true&characterEncoding=utf-8}
     #设置驱动类
     driver-class-name: com.mysql.cj.jdbc.Driver
     #设置数据源
